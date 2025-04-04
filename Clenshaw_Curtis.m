@@ -1,9 +1,9 @@
 clc; clear; close all;
 
-f = @(x) 5 .* x .* exp(-2*x);
-a = 0.1;
-b = 1.3;
-n = 4;
+f = @(x) x.^2 + 2*x +1;
+a = 0;
+b = 3;
+n = 2;
 
 [x_clenshaw, w_clenshaw] = fclencurt(n+1, a, b);
 I_clenshaw = sum(w_clenshaw .* f(x_clenshaw));
